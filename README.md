@@ -5,6 +5,8 @@ iod::metamap
 operations on metamaps are runned by the compiler and have a O(1)
 runtime cost. This greatly helps to build high performance
 applications while keeping the flexibility of maps.
+Compile time has also been reduced thanks to a zero-compile-time cost
+key retrieve and the heavy use of parameter pack expansion.
 
 Tutorial
 ==========
@@ -24,7 +26,8 @@ A map is a set of key value pairs:
 // Create a map
 auto m = iod::metamap(_a = 1, _b = 2);
 
-// Retrieve map values via direct member access:
+// Retrieve map values via direct member access.
+// Zero cost neither at runtime nor compile time.
 assert(m.a == 1);
 // Or via operator[].
 assert(m[_a] == 1);

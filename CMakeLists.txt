@@ -15,6 +15,5 @@ add_test(cat cat)
 add_executable(intersection tests/intersection.cc)
 add_test(intersection intersection)
 
-
 add_executable(substract tests/substract.cc)
 add_test(substract substract)
