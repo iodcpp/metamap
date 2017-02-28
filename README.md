@@ -26,7 +26,6 @@ used as map keys.
 ```c++
 IOD_SYMBOL(a)
 IOD_SYMBOL(b)
-using namespace s;
 ```
 
 A map is a set of key value pairs:

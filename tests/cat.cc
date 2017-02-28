@@ -5,7 +5,6 @@
 IOD_SYMBOL(test1)
 IOD_SYMBOL(test2)
 IOD_SYMBOL(test3)
-using namespace s;
 
 int main()
 {

@@ -8,7 +8,6 @@ IOD_SYMBOL(test2)
 IOD_SYMBOL(test3)
 IOD_SYMBOL(test4)
 IOD_SYMBOL(test5)
-using namespace s;
 
 int main()
 {
