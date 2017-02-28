@@ -1,7 +1,7 @@
 #include <iod/metamap/make.hh>
 #include <iod/metamap/algorithms/intersection.hh>
 #include <cassert>
-#include <iostream>
+#include <string>
 
 IOD_SYMBOL(test1)
 IOD_SYMBOL(test2)

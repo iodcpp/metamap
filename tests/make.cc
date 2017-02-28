@@ -31,7 +31,11 @@ int main()
   x++;
   assert(m2[_test1] == 42);
 
-  // Rvalues
   auto m3 = iod::make_metamap(_test1 = std::string("test"));
   assert(m3.test1 == "test");
+
+  // Copy.
+  decltype(m3) m4 = m3;
+  assert(m4.test1 == "test");
+  assert(m4.test1.data() != m3.test1.data());
 }

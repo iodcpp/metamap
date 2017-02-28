@@ -1,7 +1,6 @@
 #include <iod/metamap/make.hh>
 #include <iod/metamap/algorithms/substract.hh>
 #include <cassert>
-#include <iostream>
 
 IOD_SYMBOL(test1)
 IOD_SYMBOL(test2)
@@ -21,7 +20,6 @@ int main()
   assert(!has_key(c, _test2));
   assert(!has_key(c, _test3));
   assert(has_key(c, _test4));
-  std::cout << c.test1 << std::endl;
   assert(c.test1 == 12);
   assert(c.test4 == 14);
 }
