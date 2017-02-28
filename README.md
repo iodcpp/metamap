@@ -2,7 +2,7 @@ iod::metamap
 ===============================
 
 ```iod::metamap``` is an immutable zero-cost key value map. All
-operations on metamaps are runned by the compiler and have a O(1)
+operations on metamaps are run by the compiler and have a O(1)
 runtime cost. This greatly helps to build high performance
 applications while keeping the flexibility of maps.
 Compile time has also been reduced thanks to a zero-compile-time cost
