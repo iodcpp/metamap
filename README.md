@@ -14,7 +14,7 @@ Note: This is a work in progress.
 Dependencies
 ==============
 
-```iod::symbol```
+iod::symbol
 
 
 
