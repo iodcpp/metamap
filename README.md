@@ -10,7 +10,7 @@ Tutorial
 ==========
 
 Let's first define some [symbols](https://github.com/iodcpp/symbol). They will be
-use as map keys.
+used as map keys.
 
 ```c++
 IOD_SYMBOL(a)
