@@ -4,8 +4,7 @@ iod::metamap
 ```iod::metamap``` is an immutable zero-cost key value map. All
 operations on metamaps are runned by the compiler and have a O(1)
 runtime cost. This greatly helps to build high performance
-applications while keeping the flexibility of data structures like
-maps.
+applications while keeping the flexibility of maps.
 
 Tutorial
 ==========
@@ -47,4 +46,10 @@ Build the map containing keys present in m1 but not in m2, taking values from m1
 
 ```c++
 auto m5 = iod::substract(m1, m2);
+```
+
+Map a function on all key value pairs:
+
+```c++
+iod::map(m1, [] (auto k, auto v) { std::cout << iod::symbol_string(k) << "=" << v << std::endl; });
 ```
