@@ -10,13 +10,16 @@ key retrieve and the heavy use of parameter pack expansion.
 
 Note: This is a work in progress.
 
+
 Dependencies
-===============================
+==============
 
 ```iod::symbol```
 
+
+
 Tutorial
-==========
+==============
 
 Let's first define some [symbols](https://github.com/iodcpp/symbol). They will be
 used as map keys.
