@@ -8,6 +8,13 @@ applications while keeping the flexibility of maps.
 Compile time has also been reduced thanks to a zero-compile-time cost
 key retrieve and the heavy use of parameter pack expansion.
 
+Note: This is a work in progress.
+
+Dependencies
+===============================
+
+```iod::symbol```
+
 Tutorial
 ==========
 
