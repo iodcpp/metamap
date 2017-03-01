@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iod/metamap/metamap.hh>
+#include <experimental/tuple>
 
 namespace iod
 {
@@ -12,6 +13,14 @@ namespace iod
       ((void)f(std::forward<E>(e)), 0)...};
   }
 
+
+  template <typename T, typename F>
+  void tuple_apply_each(F&& f, T&& t)
+  {
+    return std::experimental::apply([&] (auto&&... e) { apply_each(f, std::forward<decltype(e)>(e)...); },
+                                    std::forward<T>(t));
+  }
+  
   // Map a function(key, value) on all kv pair
   template <typename... M, typename F>
   void map(const metamap<M...>& m, F fun)

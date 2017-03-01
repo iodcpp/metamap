@@ -57,6 +57,12 @@ namespace iod
     }
 
   };
+
+  template <typename... Ms>
+  constexpr auto size(metamap<Ms...>)
+  {
+    return sizeof...(Ms);
+  }
   
   template <typename K, typename M>
   constexpr auto has_key(M&& map, K k)
@@ -69,6 +75,7 @@ namespace iod
   {
     return decltype(has_member(std::declval<M>(), k)){};
   }
+
 }
 
 #include "make.hh"
