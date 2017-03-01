@@ -5,6 +5,13 @@
 namespace iod
 {
 
+  template <typename... E, typename F>
+  void apply_each(F&& f, E&&... e)
+  {
+    (void)std::initializer_list<int>{
+      ((void)f(std::forward<E>(e)), 0)...};
+  }
+
   // Map a function(key, value) on all kv pair
   template <typename... M, typename F>
   void map(const metamap<M...>& m, F fun)
@@ -13,9 +20,8 @@ namespace iod
       {
         return fun(key, m[key]);
       };
-    
-    (void)std::initializer_list<int>{
-      ((void)apply(typename M::_iod_symbol_type{}), 0)...};
+
+    apply_each(apply, typename M::_iod_symbol_type{}...);
   }
 
   // Map a function(key, value) on all kv pair an reduce

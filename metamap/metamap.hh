@@ -70,3 +70,9 @@ namespace iod
     return decltype(has_member(std::declval<M>(), k)){};
   }
 }
+
+#include "make.hh"
+#include "algorithms/map_reduce.hh"
+#include "algorithms/intersection.hh"
+#include "algorithms/substract.hh"
+#include "algorithms/cat.hh"

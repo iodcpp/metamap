@@ -1,12 +1,14 @@
 #pragma once
 
-#include <iod/metamap/metamap.hh>
 #include <iod/symbol/symbol.hh>
 #include <iod/symbol/ast.hh>
 
 namespace iod
 {
 
+
+  template <typename ...Ms>
+  struct metamap;
 
   namespace internal
   {

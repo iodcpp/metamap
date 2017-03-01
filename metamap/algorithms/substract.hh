@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iod/metamap/metamap.hh>
 #include <iod/metamap/algorithms/map_reduce.hh>
 #include <iod/metamap/algorithms/make_metamap_skip.hh>

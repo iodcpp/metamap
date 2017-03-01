@@ -1,4 +1,4 @@
-#include <iod/metamap/make.hh>
+#include <iod/metamap/metamap.hh>
 #include <cassert>
 #include <string>
 
