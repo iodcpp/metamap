@@ -24,21 +24,23 @@ Let's first define some [symbols](https://github.com/iodcpp/symbol). They will b
 used as map keys.
 
 ```c++
-IOD_SYMBOL(a)
-IOD_SYMBOL(b)
+namespace s {
+  IOD_SYMBOL(a)
+  IOD_SYMBOL(b)
+}
 ```
 
 A map is a set of key value pairs:
 
 ```c++
 // Create a map
-auto m = iod::metamap(_a = 1, _b = 2);
+auto m = iod::metamap(s::_a = 1, s::_b = 2);
 
 // Retrieve map values via direct member access.
 // Zero cost neither at runtime nor compile time.
 assert(m.a == 1);
 // Or via operator[].
-assert(m[_a] == 1);
+assert(m[s::_a] == 1);
 ```
 
 Concatenation of two maps. Values of m1 are given the priority in case of dupplicate keys.
