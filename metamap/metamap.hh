@@ -20,7 +20,10 @@ namespace iod
 
   }
 
-  template <typename ...Ms>
+  template <typename... T>
+  struct typelist {};
+  
+  template <typename... Ms>
   struct metamap;
   
   template <typename F, typename... M>
