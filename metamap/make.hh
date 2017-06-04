@@ -23,7 +23,7 @@ namespace iod
     decltype(auto) exp_to_variable(const assign_exp<S, V>& e)
     {
       typedef std::remove_const_t<std::remove_reference_t<V>> vtype;
-      return make_variable<vtype>(S{}, e.right);
+      return make_variable(S{}, e.right);
     }
     
     template <typename ...T>
