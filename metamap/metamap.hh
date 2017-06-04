@@ -81,8 +81,8 @@ namespace iod
 
 }
 
-#include <iod/make.hh>
-#include <iod/algorithms/map_reduce.hh>
-#include <iod/algorithms/intersection.hh>
-#include <iod/algorithms/substract.hh>
-#include <iod/algorithms/cat.hh>
+#include <iod/metamap/make.hh>
+#include <iod/metamap/algorithms/map_reduce.hh>
+#include <iod/metamap/algorithms/intersection.hh>
+#include <iod/metamap/algorithms/substract.hh>
+#include <iod/metamap/algorithms/cat.hh>
