@@ -13,7 +13,6 @@ namespace iod
       ((void)f(std::forward<E>(e)), 0)...};
   }
 
-
   template <typename T, typename F>
   void tuple_apply_each(F&& f, T&& t)
   {

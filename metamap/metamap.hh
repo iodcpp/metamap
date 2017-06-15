@@ -79,6 +79,16 @@ namespace iod
     return decltype(has_member(std::declval<M>(), k)){};
   }
 
+  template <typename K, typename M, typename O>
+  constexpr auto get_or(M&& map, K k, O default_)
+  {
+    if constexpr(has_key(map, k)) {
+        return map[k];
+      }
+    else
+      return default_;
+  }
+  
 }
 
 #include <iod/metamap/make.hh>
