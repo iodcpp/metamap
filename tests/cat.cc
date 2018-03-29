@@ -9,8 +9,8 @@ IOD_SYMBOL(test3)
 int main()
 {
 
-  auto a = iod::make_metamap(_test1 = 12, _test2 = 13);
-  auto b = iod::make_metamap(_test3 = 14);
+  auto a = iod::make_metamap(s::test1 = 12, s::test2 = 13);
+  auto b = iod::make_metamap(s::test3 = 14);
 
   auto c = iod::cat(a, b);
 

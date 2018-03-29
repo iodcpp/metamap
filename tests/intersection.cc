@@ -11,16 +11,16 @@ IOD_SYMBOL(test5)
 
 int main()
 {
-  auto a = iod::make_metamap(_test1 = 12, _test2 = 13, _test4 = 14, _test5 = std::string("test"));
+  auto a = iod::make_metamap(s::test1 = 12, s::test2 = 13, s::test4 = 14, s::test5 = std::string("test"));
 
-  auto b = iod::make_metamap(_test2 = 12, _test3 = 14, _test5 = 16);
+  auto b = iod::make_metamap(s::test2 = 12, s::test3 = 14, s::test5 = 16);
   auto c = iod::intersection(a, b);
 
-  assert(!has_key(c, _test1));
-  assert(has_key(c, _test2));
-  assert(!has_key(c, _test3));
-  assert(!has_key(c, _test4));
-  assert(has_key(c, _test5));
+  assert(!has_key(c, s::test1));
+  assert(has_key(c, s::test2));
+  assert(!has_key(c, s::test3));
+  assert(!has_key(c, s::test4));
+  assert(has_key(c, s::test5));
 
   assert(c.test2 == 13);
   assert(c.test5 == "test");
