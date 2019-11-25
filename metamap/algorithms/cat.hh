@@ -2,8 +2,8 @@
 
 #include <iod/metamap/metamap.hh>
 
-namespace iod
-{
+namespace iod { namespace metamap {
+
 
   template <typename ...T, typename ...U>
   inline decltype(auto) cat(const metamap<T...>& a,
@@ -13,4 +13,4 @@ namespace iod
                                *static_cast<const U*>(&b)...);
   }
   
-}
+}}

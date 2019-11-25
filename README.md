@@ -52,7 +52,7 @@ auto m3 = iod::cat(m1, m2);
 Build the map containing keys present in m1 and m2, taking values from m1.
 
 ```c++
-auto m4 = iod::intersection(m1, m2);
+auto m4 = iod::metamap::intersection(m1, m2);
 ```
 
 Build the map containing keys present in m1 but not in m2, taking values from m1.

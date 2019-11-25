@@ -8,13 +8,14 @@ IOD_SYMBOL(test2)
 IOD_SYMBOL(test3)
 IOD_SYMBOL(test4)
 IOD_SYMBOL(test5)
+using namespace iod::metamap;
 
 int main()
 {
-  auto a = iod::make_metamap(s::test1 = 12, s::test2 = 13, s::test4 = 14, s::test5 = std::string("test"));
+  auto a = make_metamap(s::test1 = 12, s::test2 = 13, s::test4 = 14, s::test5 = std::string("test"));
 
-  auto b = iod::make_metamap(s::test2 = 12, s::test3 = 14, s::test5 = 16);
-  auto c = iod::intersection(a, b);
+  auto b = make_metamap(s::test2 = 12, s::test3 = 14, s::test5 = 16);
+  auto c = intersection(a, b);
 
   assert(!has_key(c, s::test1));
   assert(has_key(c, s::test2));

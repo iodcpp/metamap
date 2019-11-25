@@ -7,13 +7,14 @@ IOD_SYMBOL(test2)
 IOD_SYMBOL(test3)
 IOD_SYMBOL(test4)
 
+using namespace iod::metamap;
 int main()
 {
 
-  auto a = iod::make_metamap(s::test1 = 12, s::test2 = 13, s::test3 = 13, s::test4 = 14);
-  auto b = iod::make_metamap(s::test2 = 12, s::test3 = 14);
+  auto a = make_metamap(s::test1 = 12, s::test2 = 13, s::test3 = 13, s::test4 = 14);
+  auto b = make_metamap(s::test2 = 12, s::test3 = 14);
 
-  auto c = iod::substract(a, b);
+  auto c = substract(a, b);
 
   assert(has_key(c, s::test1));
   assert(!has_key(c, s::test2));

@@ -6,13 +6,14 @@ IOD_SYMBOL(test1)
 IOD_SYMBOL(test2)
 IOD_SYMBOL(test3)
 
+using namespace iod::metamap;
 int main()
 {
 
-  auto a = iod::make_metamap(s::test1 = 12, s::test2 = 13);
-  auto b = iod::make_metamap(s::test3 = 14);
+  auto a = make_metamap(s::test1 = 12, s::test2 = 13);
+  auto b = make_metamap(s::test3 = 14);
 
-  auto c = iod::cat(a, b);
+  auto c = cat(a, b);
 
   assert(c.test1 == 12);
   assert(c.test2 == 13);

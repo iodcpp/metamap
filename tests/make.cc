@@ -5,12 +5,13 @@
 IOD_SYMBOL(test1)
 IOD_SYMBOL(test2)
 IOD_SYMBOL(test3)
+using namespace iod::metamap;
 
 int main()
 {
 
   // Simple map.
-  auto m = iod::make_metamap(s::test1 = 12, s::test2 = 13);
+  auto m = make_metamap(s::test1 = 12, s::test2 = 13);
 
   assert(m.test1 == 12);
   assert(m[s::test1] == 12);
@@ -24,13 +25,13 @@ int main()
 
   // References.
   int x = 41;
-  auto m2 = iod::make_metamap_reference(s::test1 = x);
+  auto m2 = make_metamap_reference(s::test1 = x);
 
   assert(m2[s::test1] == 41);
   x++;
   assert(m2[s::test1] == 42);
 
-  auto m3 = iod::make_metamap(s::test1 = std::string("test"));
+  auto m3 = make_metamap(s::test1 = std::string("test"));
   assert(m3.test1 == "test");
 
   // Copy.

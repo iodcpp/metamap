@@ -3,8 +3,8 @@
 #include <iod/metamap/metamap.hh>
 #include <iod/metamap/algorithms/cat.hh>
 
-namespace iod
-{
+namespace iod { namespace metamap {
+
   
   struct skip {};
   static struct {
@@ -35,4 +35,4 @@ namespace iod
 
   } make_metamap_skip;
 
-}
+}}
