@@ -24,10 +24,8 @@ Let's first define some [symbols](https://github.com/iodcpp/symbol). They will b
 used as map keys.
 
 ```c++
-namespace s {
-  IOD_SYMBOL(a)
-  IOD_SYMBOL(b)
-}
+IOD_SYMBOL(a)
+IOD_SYMBOL(b)
 ```
 
 A map is a set of key value pairs:
@@ -52,7 +50,7 @@ auto m3 = iod::cat(m1, m2);
 Build the map containing keys present in m1 and m2, taking values from m1.
 
 ```c++
-auto m4 = iod::metamap::intersection(m1, m2);
+auto m4 = iod::intersection(m1, m2);
 ```
 
 Build the map containing keys present in m1 but not in m2, taking values from m1.

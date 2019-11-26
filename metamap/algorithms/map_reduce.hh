@@ -3,7 +3,7 @@
 #include <iod/metamap/metamap.hh>
 #include <experimental/tuple>
 
-namespace iod { namespace metamap {
+namespace iod {
 
   template <typename... E, typename F>
   void apply_each(F&& f, E&&... e)
@@ -44,4 +44,4 @@ namespace iod { namespace metamap {
     return reduce(apply(typename M::_iod_symbol_type{})...);
   }
   
-}}
+}

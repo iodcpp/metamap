@@ -2,7 +2,7 @@
 
 #include <iod/metamap/metamap.hh>
 
-namespace iod { namespace metamap {
+namespace iod {
 
 
   template <typename ...T, typename ...U>
@@ -13,4 +13,4 @@ namespace iod { namespace metamap {
                                *static_cast<const U*>(&b)...);
   }
   
-}}
+}

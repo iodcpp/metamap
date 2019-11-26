@@ -3,10 +3,8 @@
 #include <iod/symbol/symbol.hh>
 #include <iod/symbol/ast.hh>
 
-namespace iod { namespace metamap {
+namespace iod {
 
-
-  using namespace symbol;
   
   template <typename ...Ms>
   struct metamap;
@@ -53,4 +51,4 @@ namespace iod { namespace metamap {
     return internal::make_metamap_helper(internal::exp_to_variable_ref(std::forward<T>(args))...);
   }
   
-}}
+}

@@ -7,7 +7,8 @@ IOD_SYMBOL(test2)
 IOD_SYMBOL(test3)
 IOD_SYMBOL(test4)
 
-using namespace iod::metamap;
+using namespace iod;
+
 int main()
 {
 

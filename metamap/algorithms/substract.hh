@@ -4,7 +4,7 @@
 #include <iod/metamap/algorithms/map_reduce.hh>
 #include <iod/metamap/algorithms/make_metamap_skip.hh>
 
-namespace iod { namespace metamap {
+namespace iod {
 
   template <typename ...T, typename ...U>
   inline auto substract(const metamap<T...>& a,
@@ -17,4 +17,4 @@ namespace iod { namespace metamap {
         else return skip{}; }, make_metamap_skip);
   }
 
-}}
+}

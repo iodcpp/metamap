@@ -2,7 +2,7 @@
 
 #include <utility>
 
-namespace iod { namespace metamap {
+namespace iod {
 
   namespace internal
   {
@@ -19,8 +19,6 @@ namespace iod { namespace metamap {
 
   }
 
-  template <typename... T>
-  struct typelist {};
   
   template <typename... Ms>
   struct metamap;
@@ -93,7 +91,7 @@ namespace iod { namespace metamap {
   template <typename... M>
   struct is_metamap<metamap<M...>> { enum { ret = true }; };
   
-}}
+}
 
 #include <iod/metamap/make.hh>
 #include <iod/metamap/algorithms/map_reduce.hh>
