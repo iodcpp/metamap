@@ -98,3 +98,4 @@ namespace iod {
 #include <iod/metamap/algorithms/intersection.hh>
 #include <iod/metamap/algorithms/substract.hh>
 #include <iod/metamap/algorithms/cat.hh>
+#include <iod/metamap/algorithms/tuple_utils.hh>

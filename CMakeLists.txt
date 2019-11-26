@@ -18,6 +18,9 @@ add_test(intersection intersection)
 add_executable(substract tests/substract.cc)
 add_test(substract substract)
 
+add_executable(tuple tests/tuple.cc)
+add_test(tuple tuple)
+
 
 install(DIRECTORY metamap DESTINATION include/iod
   FILES_MATCHING PATTERN "*.hh")
